@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>玛雅发信-国际短信与跨境通信发送指南</title>
+<meta name="description" content="玛雅发信是面向跨境业务的国际短信与通信发送服务平台，提供全球短信通道、验证码通知、营销触达与到达率优化指南，帮助企业与个人了解海外发信的渠道选择、合规要求与常见问题。">
+<meta name="keywords" content="玛雅发信,国际短信,跨境通信,海外短信发送,短信通道,验证码短信,营销短信">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--ink:#0f1b2d;
+--ink-soft:#43536b;
+--line:#e2e8f0;
+--brand:#0e7c86;
+--brand-deep:#0a5b63;
+--brand-soft:#e6f4f5;
+--accent:#f0a02a;
+--bg:#f6f9fa;
+--white:#ffffff;
+--radius:14px;
+--shadow:0 6px 24px rgba(15,27,45,.07);
+}
+html{scroll-behavior:smooth}
+body{
+font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;
+color:var(--ink);
+background:var(--bg);
+line-height:1.75;
+font-size:16px;
+-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:100%;max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* ---------- 顶部信息条 ---------- */
+.topbar{
+background:var(--ink);
+color:#c8d4e2;
+font-size:13px;
+padding:8px 0;
+}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.topbar span{display:inline-flex;align-items:center;gap:6px}
+.topbar .dot{width:7px;height:7px;border-radius:50%;background:#3ddc97;display:inline-block}
+.topbar a{color:#e8f4f5;border-bottom:1px dashed rgba(255,255,255,.35)}
+.topbar a:hover{color:#fff;border-bottom-color:#fff}
+
+/* ---------- 页眉 ---------- */
+header.site-header{
+background:var(--white);
+border-bottom:1px solid var(--line);
+position:sticky;top:0;z-index:50;
+box-shadow:0 1px 0 rgba(15,27,45,.02);
+}
+.header-inner{
+display:flex;align-items:center;justify-content:space-between;
+gap:24px;padding:14px 0;flex-wrap:wrap;
+}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{
+width:44px;height:44px;border-radius:12px;
+background:linear-gradient(135deg,var(--brand),#12a3a8);
+display:flex;align-items:center;justify-content:center;
+color:#fff;font-weight:700;font-size:19px;letter-spacing:.5px;
+box-shadow:0 4px 12px rgba(14,124,134,.28);
+}
+.logo-text b{display:block;font-size:19px;letter-spacing:.5px;line-height:1.3}
+.logo-text small{display:block;font-size:12px;color:var(--ink-soft);letter-spacing:1px}
+
+nav.main-nav ul{display:flex;list-style:none;gap:4px;flex-wrap:wrap}
+nav.main-nav a{
+display:block;padding:8px 14px;border-radius:9px;
+font-size:15px;color:var(--ink-soft);transition:.2s;
+}
+nav.main-nav a:hover{background:var(--brand-soft);color:var(--brand-deep)}
+nav.main-nav a.active{background:var(--brand);color:#fff;font-weight:600}
+
+.header-cta{
+display:inline-block;padding:10px 20px;border-radius:10px;
+background:var(--accent);color:#3a2600;font-weight:700;font-size:14px;
+transition:.2s;white-space:nowrap;
+}
+.header-cta:hover{background:#e0901c;transform:translateY(-1px)}
+
+/* ---------- 首屏 ---------- */
+.hero{
+background:
+radial-gradient(1100px 420px at 88% -10%,rgba(18,163,168,.22),transparent 60%),
+linear-gradient(160deg,#0c2a33 0%,#0f3b45 52%,#0e7c86 100%);
+color:#eaf6f7;
+padding:64px 0 58px;
+position:relative;overflow:hidden;
+}
+.hero::after{
+content:"";position:absolute;right:-120px;bottom:-140px;
+width:420px;height:420px;border-radius:50%;
+background:radial-gradient(circle,rgba(240,160,42,.22),transparent 68%);
+}
+.hero-grid{
+display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;
+position:relative;z-index:2;
+}
+.hero-tag{
+display:inline-block;font-size:13px;letter-spacing:1.5px;
+padding:5px 14px;border-radius:100px;
+background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);
+margin-bottom:20px;color:#bff0f2;
+}
+.hero h1{
+font-size:40px;line-height:1.28;letter-spacing:.5px;
+margin-bottom:18px;font-weight:800;
+}
+.hero h1 em{font-style:normal;color:#ffd489}
+.hero p.lead{
+font-size:16.5px;color:#c4dee1;max-width:620px;margin-bottom:28px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.btn{
+display:inline-block;padding:13px 28px;border-radius:11px;
+font-size:15px;font-weight:600;transition:.22s;border:1px solid transparent;
+}
+.btn-primary{background:var(--accent);color:#3a2600}
+.btn-primary:hover{background:#f7b247;transform:translateY(-2px);box-shadow:0 10px 22px rgba(240,160,42,.3)}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#eaf6f7}
+.btn-ghost:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
+
+.hero-stats{display:flex;gap:34px;flex-wrap:wrap}
+.hero-stats div b{display:block;font-size:22px;color:#ffd489;font-weight:800}
+.hero-stats div span{font-size:13px;color:#a9c9cd}
+
+/* 首屏右侧卡片 */
+.hero-card{
+background:rgba(255,255,255,.07);
+border:1px solid rgba(255,255,255,.16);
+border-radius:18px;padding:26px 24px;
+backdrop-filter:blur(6px);
+}
+.hero-card h3{font-size:16px;margin-bottom:16px;color:#fff;letter-spacing:.5px}
+.hero-card ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+.hero-card li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:#cfe6e8}
+.hero-card li i{
+flex:0 0 22px;height:22px;border-radius:7px;margin-top:2px;
+background:rgba(240,160,42,.2);color:#ffd489;
+font-style:normal;font-size:13px;font-weight:700;
+display:flex;align-items:center;justify-content:center;
+}
+
+/* ---------- 通用区块 ---------- */
+section{padding:62px 0}
+.section-head{margin-bottom:34px;max-width:760px}
+.section-head .kicker{
+font-size:13px;letter-spacing:2px;color:var(--brand);
+font-weight:700;text-transform:uppercase;margin-bottom:10px;
+display:block;
+}
+.section-head h2{
+font-size:28px;line-height:1.4;letter-spacing:.3px;margin-bottom:12px;
+}
+.section-head p{color:var(--ink-soft);font-size:15.5px}
+.bg-white{background:var(--white)}
+
+/* ---------- 渠道能力 ---------- */
+.channel-grid{
+display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+.channel-card{
+background:var(--white);border:1px solid var(--line);
+border-radius:var(--radius);padding:26px 24px;
+transition:.24s;
+}
+.channel-card:hover{
+border-color:#b7dfe2;transform:translateY(-4px);
+box-shadow:var(--shadow);
+}
+.channel-icon{
+width:46px;height:46px;border-radius:12px;
+background:var(--brand-soft);color:var(--brand-deep);
+display:flex;align-items:center;justify-content:center;
+font-size:20px;font-weight:700;margin-bottom:16px;
+}
+.channel-card h3{font-size:17.5px;margin-bottom:10px}
+.channel-card p{font-size:14.5px;color:var(--ink-soft);margin-bottom:14px}
+.channel-card ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.channel-card li{
+font-size:13.8px;color:var(--ink-soft);padding-left:16px;position:relative;
+}
+.channel-card li::before{
+content:"";position:absolute;left:0;top:9px;
+width:6px;height:6px;border-radius:50%;background:var(--brand);
+}
+
+/* ---------- 流程 ---------- */
+.flow{
+display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+counter-reset:step;
+}
+.flow-item{
+background:var(--white);border:1px solid var(--line);
+border-radius:var(--radius);padding:24px 22px;position:relative;
+}
+.flow-item::before{
+counter-increment:step;content:"0" counter(step);
+position:absolute;top:18px;right:20px;
+font-size:26px;font-weight:800;color:#e8eff2;letter-spacing:-1px;
+}
+.flow-item h3{font-size:16.5px;margin-bottom:10px;position:relative;z-index:2}
+.flow-item p{font-size:14px;color:var(--ink-soft);position:relative;z-index:2}
+
+/* ---------- 场景双栏 ---------- */
+.scene-wrap{
+display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;
+}
+.scene-list{display:flex;flex-direction:column;gap:16px}
+.scene-item{
+background:var(--white);border:1px solid var(--line);border-left:4px solid var(--brand);
+border-radius:10px;padding:18px 20px;
+}
+.scene-item h3{font-size:16px;margin-bottom:6px}
+.scene-item p{font-size:14.3px;color:var(--ink-soft)}
+
+.check-panel{
+background:var(--white);border:1px solid var(--line);
+border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow);
+}
+.check-panel h3{font-size:18px;margin-bottom:8px}
+.check-panel > p{font-size:14.3px;color:var(--ink-soft);margin-bottom:20px}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+.check-list li{display:flex;gap:12px;font-size:14.5px;align-items:flex-start}
+.check-list li span{
+flex:0 0 20px;height:20px;border-radius:50%;margin-top:3px;
+background:var(--brand);color:#fff;font-size:12px;
+display:flex;align-items:center;justify-content:center;font-weight:700;
+}
+.check-list li b{display:block;font-weight:600;margin-bottom:2px}
+.check-list li small{color:var(--ink-soft);font-size:13.6px;line-height:1.65;display:block}
+
+/* ---------- 到达率指标 ---------- */
+.metrics{
+display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+}
+.metric{
+background:linear-gradient(160deg,#ffffff,#f2f8f9);
+border:1px solid var(--line);border-radius:var(--radius);
+padding:24px 22px;text-align:center;
+}
+.metric b{
+display:block;font-size:15px;color:var(--brand-deep);margin-bottom:8px;
+}
+.metric p{font-size:13.8px;color:var(--ink-soft)}
+
+/* ---------- 合规提示 ---------- */
+.notice{
+background:#fffaf0;border:1px solid #f6dfb4;border-radius:var(--radius);
+padding:26px 26px;
+}
+.notice h3{font-size:17px;margin-bottom:12px;color:#8a5a00}
+.notice p{font-size:14.5px;color:#6f5630;margin-bottom:10px}
+.notice p:last-child{margin-bottom:0}
+
+/* ---------- 价格/套餐说明 ---------- */
+.plan-note{
+background:var(--white);border:1px dashed #c6dde0;border-radius:var(--radius);
+padding:24px 26px;font-size:14.5px;color:var(--ink-soft);
+}
+.plan-note strong{color:var(--ink)}
+
+/* ---------- FAQ ---------- */
+.faq{display:flex;flex-direction:column;gap:12px;max-width:900px}
+.faq details{
+background:var(--white);border:1px solid var(--line);border-radius:12px;
+padding:0 22px;transition:.2s;
+}
+.faq details[open]{border-color:#b7dfe2;box-shadow:var(--shadow)}
+.faq summary{
+list-style:none;cursor:pointer;padding:18px 0;
+font-size:15.5px;font-weight:600;display:flex;justify-content:space-between;
+gap:16px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+content:"+";font-size:20px;color:var(--brand);font-weight:400;flex:0 0 auto;
+}
+.faq details[open] summary::after{content:"–"}
+.faq .faq-body{
+padding:0 0 20px;font-size:14.6px;color:var(--ink-soft);
+border-top:1px solid var(--line);padding-top:16px;
+}
+
+/* ---------- 侧栏文章 ---------- */
+.article-layout{
+display:grid;grid-template-columns:2fr 1fr;gap:40px;align-items:start;
+}
+.article-main article{
+background:var(--white);border:1px solid var(--line);
+border-radius:var(--radius);padding:28px 28px;margin-bottom:20px;
+}
+.article-main h3{font-size:18px;margin-bottom:12px}
+.article-main p{font-size:14.8px;color:var(--ink-soft);margin-bottom:12px}
+.article-main p:last-child{margin-bottom:0}
+.article-main .meta{
+font-size:12.8px;color:#8fa0b4;letter-spacing:.5px;margin-bottom:10px;
+}
+.side-box{
+background:var(--white);border:1px solid var(--line);
+border-radius:var(--radius);padding:24px 22px;margin-bottom:20px;
+}
+.side-box h3{font-size:16px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.side-box ul{list-style:none;display:flex;flex-direction:column;gap:11px}
+.side-box li{font-size:14.2px;color:var(--ink-soft);padding-left:16px;position:relative;line-height:1.6}
+.side-box li::before{
+content:"";position:absolute;left:0;top:9px;width:6px;height:6px;
+border-radius:2px;background:var(--accent);
+}
+.side-box .tags{display:flex;flex-wrap:wrap;gap:8px}
+.side-box .tags a{
+font-size:13px;padding:5px 12px;border-radius:100px;
+background:var(--brand-soft);color:var(--brand-deep);
+}
+.side-box .tags a:hover{background:#d3ecee}
+
+/* ---------- CTA 条 ---------- */
+.cta-band{
+background:linear-gradient(120deg,#0e7c86,#0a5b63);
+border-radius:18px;padding:44px 40px;color:#eaf6f7;
+display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;
+}
+.cta-band h2{font-size:24px;margin-bottom:8px;color:#fff}
+.cta-band p{font-size:14.8px;color:#bfe2e4;max-width:560px}
+
+/* ---------- 页脚 ---------- */
+footer.site-footer{
+background:#0c1a24;color:#8fa6b6;padding:52px 0 24px;font-size:14px;
+}
+.footer-grid{
+display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;
+padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.08);
+}
+.footer-grid h4{color:#e6f1f3;font-size:15px;margin-bottom:16px}
+.footer-grid ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-grid a:hover{color:#7fd7dc}
+.footer-about p{line-height:1.8;margin-top:14px;font-size:13.6px;color:#7b93a4}
+.footer-bottom{
+padding-top:20px;display:flex;justify-content:space-between;
+gap:16px;flex-wrap:wrap;font-size:13px;color:#6b8296;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width:1024px){
+.hero-grid{grid-template-columns:1fr;gap:36px}
+.channel-grid{grid-template-columns:repeat(2,1fr)}
+.flow{grid-template-columns:repeat(2,1fr)}
+.metrics{grid-template-columns:repeat(2,1fr)}
+.article-layout{grid-template-columns:1fr}
+.scene-wrap{grid-template-columns:1fr;gap:28px}
+.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+.topbar .container{justify-content:center;text-align:center}
+.header-inner{justify-content:center;text-align:center}
+nav.main-nav ul{justify-content:center}
+.hero{padding:44px 0 40px}
+.hero h1{font-size:28px}
+.hero-stats{gap:22px}
+section{padding:44px 0}
+.section-head h2{font-size:23px}
+.channel-grid{grid-template-columns:1fr}
+.flow{grid-template-columns:1fr}
+.metrics{grid-template-columns:1fr 1fr}
+.cta-band{padding:32px 24px}
+.cta-band h2{font-size:20px}
+.footer-grid{grid-template-columns:1fr;gap:26px}
+}
+@media (max-width:400px){
+.metrics{grid-template-columns:1fr}
+.hero h1{font-size:24px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span><i class="dot"></i> 国际短信通道 · 跨境通信发送服务</span>
+    <span>关注全球运营商规则变化，发送前请确认目标地区合规要求</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark">玛</span>
+      <span class="logo-text">
+        <b>玛雅发信</b>
+        <small>GLOBAL MESSAGING</small>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a class="active" href="#top">首页</a></li>
+        <li><a href="#channel">通道能力</a></li>
+        <li><a href="#flow">发送流程</a></li>
+        <li><a href="#scene">应用场景</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#guide">使用指南</a></li>
+      </ul>
+    </nav>
+    <a class="header-cta" href="#start">开始了解发信</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="hero-tag">跨境短信 · 验证码 · 通知 · 营销触达</span>
+        <h1>玛雅发信：把消息稳定送达<em>全球用户手机</em></h1>
+        <p class="lead">
+          当业务走出国门，短信仍然是触达海外用户最直接的方式之一。玛雅发信围绕国际短信发送场景，
+          梳理通道选择、发送流程、到达率影响因素与合规要点，帮助你在开始发信前把关键问题想清楚。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#channel">查看通道能力</a>
+          <a class="btn btn-ghost" href="#guide">阅读发信指南</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>验证码</b><span>注册 / 登录 / 支付确认</span></div>
+          <div><b>通知类</b><span>订单 / 物流 / 账户提醒</span></div>
+          <div><b>营销类</b><span>活动 / 召回 / 节日触达</span></div>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h3>发信前先确认这五件事</h3>
+        <ul>
+          <li><i>1</i><span>目标国家或地区，以及当地运营商对短信内容的限制</span></li>
+          <li><i>2</i><span>短信类型：验证码、通知还是营销，通道要求并不相同</span></li>
+          <li><i>3</i><span>发送号码形式：短号、长号还是本地号码，影响用户信任度</span></li>
+          <li><i>4</i><span>签名与模板是否需要提前报备，报备周期通常较长</span></li>
+          <li><i>5</i><span>退订方式与用户授权记录，是营销类短信的合规底线</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 通道能力 -->
+  <section id="channel" class="bg-white">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Channel Capability</span>
+        <h2>国际短信通道的主要类型与适用场景</h2>
+        <p>
+          不同业务对短信的要求差别很大。验证码看重速度和稳定性，营销短信看重覆盖与成本，
+          通知类短信则更关注内容长度与展示效果。下面按类型梳理常见通道及其特点。
+        </p>
+      </div>
+      <div class="channel-grid">
+
+        <article class="channel-card">
+          <div class="channel-icon">验</div>
+          <h3>验证码短信</h3>
+          <p>用于注册、登录、找回密码、支付确认等身份校验环节，对送达速度和到达稳定性要求最高。</p>
+          <ul>
+            <li>内容简短，通常为数字或字母组合</li>
+            <li>需要关注发送频次限制与防刷策略</li>
+            <li>部分国家要求使用本地号码或已报备签名</li>
+          </ul>
+        </article>
+
+        <article class="channel-card">
+          <div class="channel-icon">通</div>
+          <h3>通知类短信</h3>
+          <p>用于订单状态、物流进度、账户变动、预约提醒等场景，强调信息准确和内容清晰。</p>
+          <ul>
+            <li>可包含短链接，但需注意链接域名信誉</li>
+            <li>内容较长时可能按多条计费</li>
+            <li>建议保留业务名称，便于用户识别来源</li>
+          </ul>
+        </article>
+
+        <article class="channel-card">
+          <div class="channel-icon">营</div>
+          <h3>营销类短信</h3>
+          <p>用于活动推广、用户召回、节日问候等触达，覆盖范围广，但合规要求也更为严格。</p>
+          <ul>
+            <li>必须提供清晰可用的退订方式</li>
+            <li>发送时间应避开当地深夜时段</li>
+            <li>需保留用户同意订阅的记录</li>
+          </ul>
+        </article>
+
+        <article class="channel-card">
+          <div class="channel-icon">语</div>
+          <h3>多语言内容处理</h3>
+          <p>面向多国用户时，同一业务往往需要按地区切换语言与表达方式，以减少理解偏差。</p>
+          <ul>
+            <li>注意字符编码，非拉丁字符可能缩短单条长度</li>
+            <li>避免直译造成的语气生硬或歧义</li>
+            <li>金额、日期、地址格式应本地化</li>
+          </ul>
+        </article>
+
+        <article class="channel-card">
+          <div class="channel-icon">号</div>
+          <h3>发送号码与签名</h3>
+          <p>号码形式直接影响用户对短信的信任程度，也影响部分地区的发送权限。</p>
+          <ul>
+            <li>本地长号通常更易被用户接受</li>
+            <li>部分市场对字母签名有单独报备要求</li>
+            <li>号码变更可能影响历史会话连续性</li>
+          </ul>
+        </article>
+
+        <article class="channel-card">
+          <div class="channel-icon">状</div>
+          <h3>状态回执与统计</h3>
+          <p>发送成功不等于用户已收到，状态回执是判断真实送达的重要依据。</p>
+          <ul>
+            <li>区分提交成功、运营商接收与终端送达</li>
+            <li>按国家、通道、模板分组观察失败原因</li>
+            <li>定期复盘失败率偏高的号段与时段</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 发送流程 -->
+  <section id="flow">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Workflow</span>
+        <h2>从准备到复盘：一条国际短信的完整路径</h2>
+        <p>
+          国际短信并不是「填好号码点发送」这么简单。下面四个阶段，是大多数跨境业务在发信时需要依次完成的环节。
+        </p>
+      </div>
+      <div class="flow">
+        <div class="flow-item">
+          <h3>明确需求与地区</h3>
+          <p>先确定发送国家、短信类型、预计发送量与时间窗口，再据此判断需要哪一类通道资源。</p>
+        </div>
+        <div class="flow-item">
+          <h3>准备内容与报备</h3>
+          <p>撰写短信文案，确认签名与模板要求。需要报备的地区应预留充足时间，避免影响上线节奏。</p>
+        </div>
+        <div class="flow-item">
+          <h3>联调与测试发送</h3>
+          <p>使用真实号码在目标地区做小批量测试，检查内容展示、链接跳转、退订指令是否正常。</p>
+        </div>
+        <div class="flow-item">
+          <h3>上线与数据复盘</h3>
+          <p>观察送达率、失败原因分布与用户反馈，按地区和模板持续调整发送策略。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 应用场景 -->
+  <section id="scene" class="bg-white">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Scenarios</span>
+        <h2>哪些业务场景需要国际短信</h2>
+        <p>国际短信的价值在于「不依赖网络环境」和「到达用户手机通知栏」，因此常被放在关键链路中。</p>
+      </div>
+      <div class="scene-wrap">
+        <div class="scene-list">
+          <div class="scene-item">
+            <h3>跨境电商与独立站</h3>
+            <p>用于下单确认、支付提醒、物流状态更新和签收通知，减少因信息不透明带来的客服压力。</p>
+          </div>
+          <div class="scene-item">
+            <h3>出海应用与游戏</h3>
+            <p>用于账号注册验证、异地登录提醒、活动开服通知和流失用户召回，是账号安全链路的重要一环。</p>
+          </div>
+          <div class="scene-item">
+            <h3>金融与支付类服务</h3>
+            <p>用于交易确认、异常登录告警和额度变动提醒，对到达时效与内容准确性要求较高。</p>
+          </div>
+          <div class="scene-item">
+            <h3>本地生活与预约服务</h3>
+            <p>用于预约确认、到店提醒、服务变更通知，帮助减少用户爽约和沟通成本。</p>
+          </div>
+          <div class="scene-item">
+            <h3>企业与机构通知</h3>
+            <p>用于会议提醒、内部通知、会员权益告知等，需要兼顾内容规范与发送频次控制。</p>
+          </div>
+        </div>
+
+        <aside class="check-panel">
+          <h3>发送前的自检清单</h3>
+          <p>在正式批量发送前，逐项确认可以减少大部分常见问题。</p>
+          <ul class="check-list">
+            <li><span>✓</span><div><b>号码格式是否规范</b><small>是否包含正确的国家代码，是否清理了重复、无效或明显错误的号码。</small></div></li>
+            <li><span>✓</span><div><b>文案是否含敏感内容</b><small>避免夸大承诺、误导性表述，以及可能被运营商拦截的词汇。</small></div></li>
+            <li><span>✓</span><div><b>退订方式是否可用</b><small>营销类短信应提供明确、可执行的退订指令，并确保退订后不再发送。</small></div></li>
+            <li><span>✓</span><div><b>发送时间是否合适</b><small>按目标地区当地时间安排，避开深夜与凌晨时段。</small></div></li>
+            <li><span>✓</span><div><b>测试是否覆盖主要运营商</b><small>不同运营商对同一内容的处理方式可能不同，建议分别测试。</small></div></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 到达率 -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Deliverability</span>
+        <h2>影响到达率的常见因素</h2>
+        <p>到达率并不是单一指标，它由号码质量、内容合规、通道资源和发送策略共同决定。</p>
+      </div>
+      <div class="metrics">
+        <div class="metric">
+          <b>号码质量</b>
+          <p>无效号、空号、重复号会直接拉低整体送达比例，发送前清洗名单是基础工作。</p>
+        </div>
+        <div class="metric">
+          <b>内容合规</b>
+          <p>含违规词、短链接信誉差或格式异常的内容，更容易被运营商过滤或延迟处理。</p>
+        </div>
+        <div class="metric">
+          <b>通道匹配度</b>
+          <p>不同通道在不同国家、不同运营商的覆盖能力存在差异，需要按地区匹配。</p>
+        </div>
+        <div class="metric">
+          <b>发送节奏</b>
+          <p>短时间内集中大量发送可能触发限流，分批、分时段发送通常更稳定。</p>
+        </div>
+      </div>
+      <div style="margin-top:28px" class="notice">
+        <h3>关于到达率的客观说明</h3>
+        <p>
+          任何国际短信服务都无法承诺 100% 到达。用户关机、停机、开启拦截、更换号码等情况，
+          都会导致短信无法送达终端，这属于通信链路的客观限制。
+        </p>
+        <p>
+          因此更合理的做法是：把到达率作为持续优化的指标，通过状态回执分析失败原因，
+          分地区、分运营商逐步调整，而不是期待一次性解决所有问题。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 使用指南 + 侧栏 -->
+  <section id="guide" class="bg-white">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Guide</span>
+        <h2>玛雅发信使用指南</h2>
+        <p>以下内容围绕发信过程中的常见环节展开，帮助你更快建立对国际短信的整体认识。</p>
+      </div>
+
+      <div class="article-layout">
+        <div class="article-main">
+
+          <article>
+            <div class="meta">基础概念 · 阅读约 3 分钟</div>
+            <h3>国际短信和国内短信有什么区别</h3>
+            <p>
+              最直观的差别在于链路更长。一条国际短信通常需要经过发送方、短信服务方、目标国家运营商等多个环节，
+              每个环节都可能有自己的规则和限制，因此发送前的准备工作和排查方式都与国内短信不同。
+            </p>
+            <p>
+              其次是计费方式。国际短信一般按国家、运营商和短信条数分别计价，长短信会被拆分计费，
+              不同地区的单价差异可能较大，发送前了解目标地区的计费规则有助于控制成本。
+            </p>
+          </article>
+
+          <article>
+            <div class="meta">内容规范 · 阅读约 3 分钟</div>
+            <h3>短信文案怎么写更容易通过审核</h3>
+            <p>
+              简洁、明确、可识别，是国际短信文案的三个基本原则。用户需要在几秒内判断这条短信来自谁、
+              与自己有什么关系，因此业务名称应尽量出现在开头位置。
+            </p>
+            <p>
+              营销类短信要避免使用容易引起误解的表述，例如模糊的中奖信息、夸张的收益承诺等。
+              同时应确保退订指令清晰可执行，这既是合规要求，也有助于维护发送号码的信誉。
+            </p>
+          </article>
+
+          <article>
+            <div class="meta">成本控制 · 阅读约 3 分钟</div>
+            <h3>如何合理控制国际短信成本</h3>
+            <p>
+              成本控制的核心是「减少无效发送」。发送前清洗号码、按用户活跃度分层、
+              对长期无响应的名单降低发送频率，都能在不大幅影响效果的前提下减少支出。
+            </p>
+            <p>
+              此外，不同短信类型的成本结构不同。验证码和通知类短信通常无法省略，
+              而营销类短信可以结合用户分群、发送时段和内容形式做更精细的安排。
+            </p>
+          </article>
+
+          <article>
+            <div class="meta">问题排查 · 阅读约 3 分钟</div>
+            <h3>短信发送失败时应该怎么排查</h3>
+            <p>
+              建议按「号码 → 内容 → 通道 → 时间」的顺序逐项排查。先确认号码格式和有效性，
+              再检查内容是否触发过滤，随后确认所用通道在目标地区的覆盖情况，最后观察发送时段是否过于集中。
+            </p>
+            <p>
+              如果问题集中在某个国家或某个运营商，通常与通道匹配度有关；
+              如果问题集中在某类内容，则更可能是文案或模板需要调整。
+            </p>
+          </article>
+
+        </div>
+
+        <aside>
+          <div class="side-box">
+            <h3>相关主题</h3>
+            <ul>
+              <li>海外用户手机号格式与国家代码对照</li>
+              <li>验证码短信的防刷与频次控制思路</li>
+              <li>营销短信退订机制的设计要点</li>
+              <li>短链接在短信中的使用与注意事项</li>
+              <li>短信模板报备的常见流程说明</li>
+            </ul>
+          </div>
+
+          <div class="side-box">
+            <h3>常用术语</h3>
+            <div class="tags">
+              <a href="#channel">国际短信</a>
+              <a href="#channel">短信通道</a>
+              <a href="#channel">验证码短信</a>
+              <a href="#channel">营销短信</a>
+              <a href="#flow">模板报备</a>
+              <a href="#flow">状态回执</a>
+              <a href="#scene">到达率</a>
+              <a href="#scene">退订指令</a>
+              <a href="#guide">号码清洗</a>
+            </div>
+          </div>
+
+          <div class="side-box">
+            <h3>发送前提醒</h3>
+            <ul>
+              <li>确认目标地区的合规要求，尤其是营销类短信</li>
+              <li>为模板报备预留时间，避免影响上线计划</li>
+              <li>先用小批量真实号码验证展示效果</li>
+              <li>保留用户授权与退订记录，便于后续核对</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">FAQ</span>
+        <h2>关于玛雅发信的常见问题</h2>
+        <p>以下问题来自国际短信发送过程中较常遇到的疑问，回答以通用经验为主，具体情况请以目标地区实际规则为准。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>国际短信一般多久能送达？</summary>
+          <div class="faq-body">
+            送达时间受目标国家、运营商处理效率和网络状况影响。同一地区不同运营商的到达速度也可能不同，
+            因此更建议关注整体到达比例与失败原因分布，而不是单条短信的具体耗时。
+          </div>
+        </details>
+        <details>
+          <summary>为什么短信显示发送成功，用户却没有收到？</summary>
+          <div class="faq-body">
+            发送成功通常只代表短信已提交到通道，并不等于已送达用户终端。用户关机、停机、
+            开启骚扰拦截、手机存储已满等情况，都可能导致短信无法显示。此时可通过状态回执进一步判断。
+          </div>
+        </details>
+        <details>
+          <summary>营销类短信需要注意哪些合规问题？</summary>
+          <div class="faq-body">
+            核心是「用户同意」和「可退订」。发送前应确保用户已同意接收营销信息，
+            短信中提供清晰可用的退订方式，并在用户退订后停止发送。不同国家和地区的具体要求存在差异，需按目标市场核实。
+          </div>
+        </details>
+        <details>
+          <summary>短信签名和模板需要提前报备吗？</summary>
+          <div class="faq-body">
+            部分国家和地区的运营商要求对发送签名或模板进行报备，报备周期长短不一。
+            如果业务涉及多个市场，建议在项目规划阶段就把报备时间纳入排期，避免临近上线才发现无法发送。
+          </div>
+        </details>
+        <details>
+          <summary>长短信是怎么计费的？</summary>
+          <div class="faq-body">
+            短信通常有单条字符长度限制，超出部分会被拆分为多条发送，并按条数计费。
+            包含非拉丁字符时，单条可容纳的字符数可能更少。因此控制文案长度不仅影响阅读体验，也直接影响成本。
+          </div>
+        </details>
+        <details>
+          <summary>如何判断一条短信通道是否适合我的业务？</summary>
+          <div class="faq-body">
+            可以从覆盖地区、目标运营商、短信类型支持情况、状态回执完整度和测试到达表现几个方面综合判断。
+            建议先用真实号码在目标地区做小批量测试，再决定是否扩大发送规模。
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="start" style="padding-top:0">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2>先把发信这件事想清楚，再开始发送</h2>
+          <p>从目标地区、短信类型到内容规范和合规要求，逐项确认后再进入测试与上线，通常能省下不少返工时间。</p>
+        </div>
+        <a class="btn btn-primary" href="#channel">回到通道能力</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h4>玛雅发信</h4>
+        <p>
+          围绕国际短信与跨境通信发送场景，整理通道类型、发送流程、到达率影响因素与合规要点，
+          为有海外触达需求的业务提供参考信息。
+        </p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#channel">通道能力</a></li>
+          <li><a href="#flow">发送流程</a></li>
+          <li><a href="#scene">应用场景</a></li>
+          <li><a href="#guide">使用指南</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>常见主题</h4>
+        <ul>
+          <li><a href="#channel">验证码短信</a></li>
+          <li><a href="#channel">通知类短信</a></li>
+          <li><a href="#channel">营销类短信</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>使用提示</h4>
+        <ul>
+          <li>确认目标地区合规要求</li>
+          <li>提前准备模板报备</li>
+          <li>保留用户授权记录</li>
+          <li>按地区复盘发送数据</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 玛雅发信 · 国际短信与跨境通信发送指南</span>
+      <span>页面内容以通用经验整理，具体规则请以目标地区实际要求为准</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('nav.main-nav a[href^="#"]');
+  var sections = [];
+  links.forEach(function(a){
+    var id = a.getAttribute('href').slice(1);
+    var el = document.getElementById(id);
+    if(el){ sections.push({link:a, el:el}); }
+  });
+  if(!sections.length) return;
+
+  function setActive(){
+    var pos = window.scrollY + 140;
+    var current = sections[0];
+    sections.forEach(function(item){
+      if(item.el.offsetTop <= pos){ current = item; }
+    });
+    links.forEach(function(a){ a.classList.remove('active'); });
+    if(current && current.link){ current.link.classList.add('active'); }
+  }
+
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if(!ticking){
+      window.requestAnimationFrame(function(){
+        setActive();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, {passive:true});
+
+  setActive();
+})();
+</script>
+
+</body>
+                                                                   </html>
